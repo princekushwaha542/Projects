@@ -13,9 +13,12 @@ html{
      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root{
+    /* Background and text colors */
     --bg-color: #000000;
     --primery-text-color:#ebe3e3;
     --bg-button-color:#1a1a1a;
+    --bg-task-color:#292727;
+    --delete-color:#f73c3c;
     /* Padding variables */
     --nav-padding:15px 30px;
     --section-padding:15px 30px;
@@ -41,6 +44,11 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 nav button{
     background-color: var(--bg-button-color);
     border: none;
@@ -53,5 +61,39 @@ nav button{
 section{
     padding: var(--section-padding);
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
+    gap:var(--padding-xxl);
+}
+section .task-colum{
+    flex-grow: 1;
+    background-color: var(--bg-button-color);
+    padding: var(--padding-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+}
+section .task-colum .heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .task-colum .task{
+    background-color: var(--bg-task-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+}
+section .task-colum .task button{
+    align-self: flex-end;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding:  var(--padding-m);
+    border-radius: var(--border-radius-s);
+    background-color: var(--delete-color);
+    color: var(--primery-text-color);
 }
