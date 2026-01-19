@@ -72,6 +72,11 @@ section .task-colum{
     display: flex;
     flex-direction: column;
     gap: var(--padding-m);
+    transition: all 0.07 cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hover-over{
+    border: 2px dashed var(--primery-text-color);
+    scale: 1.02;
 }
 section .task-colum .heading{
     width: 100%;
@@ -86,6 +91,7 @@ section .task-colum .task{
     display: flex;
     flex-direction: column;
     gap: var(--padding-m);
+    cursor: grab;
 }
 section .task-colum .task button{
     align-self: flex-end;
