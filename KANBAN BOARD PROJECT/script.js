@@ -6,13 +6,20 @@ const tasks = document.querySelectorAll(".task");
 
 tasks.forEach(task =>{
     task.addEventListener("drag",(e) => {
-    console.log("dragging", e);
+    // console.log("dragging", e);
     })
 })
 
-progress.addEventListener("dragenter",(e) =>{
-    progress.classList.add("hover-over");
-})
-progress.addEventListener("dragleave",(e) =>{
-    progress.classList.remove("hover-over");
-})
+function addDragEventOnColumn(column){
+    column.addEventListener("dragenter",(e) => {
+        e.preventDefault();
+        column.classList.add("hover-over")
+    })
+     column.addEventListener("dragleave",(e) => {
+        e.preventDefault();
+        column.classList.remove("hover-over")
+    })
+}
+addDragEventOnColumn(todo);
+addDragEventOnColumn(progress);
+addDragEventOnColumn(done);
