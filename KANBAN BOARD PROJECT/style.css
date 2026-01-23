@@ -125,6 +125,7 @@ section .task-colum .task button{
 
     /* background-color: red; */
 }
+
 .modal .center{
     margin-left: 100%;
     background-color: var(--bg-button-color);
