@@ -38,7 +38,7 @@ function updateData() {
 columns.forEach(column => {
 
     column.addEventListener("dragover", (e) => {
-        e.preventDefault(); // MUST
+        e.preventDefault(); 
         column.classList.add("hover-over");
     });
 
@@ -69,6 +69,7 @@ const addTaskButton = document.querySelector("#add-new-task");
 
 toggleModalBtn.addEventListener("click", () => {
     modal.classList.toggle("active");
+    
 });
 
 modalBg.addEventListener("click", () => {
@@ -79,7 +80,8 @@ modalBg.addEventListener("click", () => {
 addTaskButton.addEventListener("click", () => {
     const taskTitle = document.querySelector("#task-title-input").value.trim();
     const taskDesc = document.querySelector("#task-desc-input").value.trim();
-
+    modal.classList.remove("active");
+    
     if (!taskTitle) return;
 
     const div = document.createElement("div");
@@ -96,7 +98,6 @@ addTaskButton.addEventListener("click", () => {
     addDragStart(div);
     updateData();
 
-    modal.classList.remove("active");
 
     document.querySelector("#task-title-input").value = "";
     document.querySelector("#task-desc-input").value = "";
