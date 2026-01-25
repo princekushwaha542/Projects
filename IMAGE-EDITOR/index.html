@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMAGE EDITOR</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
-    
+    <main>
+        <section>
+            <div class="left">
+                <div class="top">
+                    <label for="image-input" class="btn">
+                        Choose image
+                        <input type="file" id="image-input" accept="image/*"hidden>
+                    </label>
+                        <button id="reset-btn" class="btn">Reset</button>
+                        <button id="download-btn" class="btn">Download</button>
+                </div>
+                <div class="bottum">
+                    <div class="placeholder">
+                        <i class="ri-image-line"></i>
+                        <p>No image chosen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
