@@ -50,12 +50,13 @@ main section .bottum{
 main section .bottum .placeholder{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     opacity: 0.6;
 
 }
 main section .bottum .placeholder i{
     font-size: 8rem;
+    
 }
 main section .bottum .placeholder p{
     font-size: var(--font-size-lg);
@@ -116,4 +117,10 @@ main section .right .filter input::-webkit-slider-runnable-track{
     background-color:#2a2a2a;
     height: 3px;
     /* background-color: rgb(188, 188, 182); */
+}
+#image-canvas{
+    /* background-color: red; */
+    max-width: 100vh;
+    max-height: 60vh;
+    padding: 0%;
 }
