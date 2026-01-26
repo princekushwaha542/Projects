@@ -123,4 +123,5 @@ main section .right .filter input::-webkit-slider-runnable-track{
     max-width: 100vh;
     max-height: 60vh;
     padding: 0%;
+    display: none;
 }
