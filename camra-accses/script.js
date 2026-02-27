@@ -1,7 +1,7 @@
 const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const photo = document.getElementById("photo");
-
+const old Photo = document.getElementById
 let stream;
 
 async function openCamera() {
