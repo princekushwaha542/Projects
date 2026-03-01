@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: skyblue;
+}
+
+.game {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.road {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 120px;
+  background: #2c2c2c;
+}
+
+.car {
+  position: absolute;
+  bottom: 120px;
+  left: 100px;
+  width: 220px;
+  height: 60px;
+  background: #e63946;
+  border-radius: 20px 40px 10px 10px;
+}
+
+.roof {
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  width: 130px;
+  height: 50px;
+  background: #e63946;
+  border-radius: 40px 40px 0 0;
+}
+
+.window {
+  position: absolute;
+  top: -35px;
+  left: 55px;
+  width: 100px;
+  height: 35px;
+  background: #a8dadc;
+  border-radius: 20px 20px 0 0;
+}
+
+.wheel {
+  position: absolute;
+  bottom: -25px;
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+}
+
+.front { right: 20px; }
+.back { left: 20px; }
+.wheel {
+  position: absolute;
+  bottom: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  /* Outer tyre */
+  background: radial-gradient(circle at center, #111 60%, #000 100%);
+  border: 6px solid #222;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Alloy Rim */
+.wheel::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ddd 40%, #888 100%);
+  position: absolute;
+}
+
+/* Center Cap */
+.wheel::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #444;
+  position: absolute;
+}
