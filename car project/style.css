@@ -95,3 +95,24 @@ body {
   background: #444;
   position: absolute;
 }
+.speedometer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: black;
+  color: lime;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: monospace;
+}
+.headlight {
+  position: absolute;
+  right: -40px;
+  top: 15px;
+  width: 60px;
+  height: 20px;
+  background: yellow;
+  opacity: 0;
+  border-radius: 20px;
+  filter: blur(8px);
+}
