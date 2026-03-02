@@ -61,3 +61,30 @@ function gameLoop() {
 }
 
 gameLoop();
+
+const colorPicker = document.getElementById("colorPicker");
+
+// Color picker change
+colorPicker.addEventListener("input", function() {
+  car.style.background = this.value;
+});
+
+// Random color function
+function randomColor() {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  car.style.background = `rgb(${r},${g},${b})`;
+}
+
+// Button color set
+function setColor(color) {
+  car.style.background = color;
+}
+
+// Keyboard shortcut (Press C)
+document.addEventListener("keydown", function(e){
+  if(e.key === "c" || e.key === "C"){
+    randomColor();
+  }
+});
