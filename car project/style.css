@@ -127,3 +127,81 @@ body {
   padding: 5px 8px;
   cursor: pointer;
 }
+.sun {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 40px yellow;
+}
+.plant {
+  position: absolute;
+  bottom: 120px;
+  width: 30px;
+  height: 60px;
+  background: green;
+  border-radius: 15px;
+  animation: movePlant 3s linear infinite;
+}
+
+.plant::before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: -15px;
+  width: 60px;
+  height: 60px;
+  background: darkgreen;
+  border-radius: 50%;
+}
+
+.plant1 { left: 50px; }
+.plant2 { left: 200px; animation-delay: 1s; }
+.plant3 { left: 350px; animation-delay: 2s; }
+
+@keyframes movePlant {
+  from { transform: translateY(0); }
+  to { transform: translateY(600px); }
+}
+.cloud {
+  position: absolute;
+  top: 80px;
+  width: 120px;
+  height: 60px;
+  background: white;
+  border-radius: 50px;
+  animation: moveCloud 20s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 60px;
+  height: 60px;
+  top: -20px;
+  left: 20px;
+}
+
+.cloud::after {
+  width: 70px;
+  height: 70px;
+  top: -30px;
+  right: 20px;
+}
+
+.cloud1 { left: -150px; animation-duration: 25s; }
+.cloud2 { left: -300px; top: 150px; animation-duration: 35s; }
+
+@keyframes movePlant {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100vw); } 
+}
