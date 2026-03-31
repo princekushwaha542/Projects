@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flipkart Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>Flipkart</h2>
+    <input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
+    <span id="location">📍 Detecting...</span>
+  </div>
+
+  <!-- Categories -->
+  <div class="categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('fashion')">Fashion</button>
+    <button onclick="filterCategory('electronics')">Electronics</button>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">🔥 Big Sale Today 🔥</div>
+
+  <!-- Products -->
+  <div id="products"></div>
+
+  <!-- Cart -->
+  <h2>Cart 🛒</h2>
+  <div id="cart"></div>
+  <h3 id="total"></h3>
+
+  <script src="script.js"></script>
+</body>
+</html>
